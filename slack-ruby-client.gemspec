@@ -3,7 +3,7 @@ $LOAD_PATH.push File.expand_path('lib', __dir__)
 require 'slack/version'
 
 Gem::Specification.new do |s|
-  s.name = 'slack-ruby-client', '>= 0.6.0'
+  s.name = 'slack-ruby-client'
   s.bindir = 'bin'
   s.executables << 'slack'
   s.version = Slack::VERSION
