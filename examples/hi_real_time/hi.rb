@@ -1,0 +1,47 @@
+# frozen_string_literal: true
+require 'slack-ruby-client'
+
+Slack.configure do |config|
+  config.token = 'xoxb-3315023640-888934731009-mW8iuzjEF6RiULWUtTRbIHAI'
+  config.logger = Logger.new(STDOUT)
+  config.logger.level = Logger::INFO
+  raise 'Missing ENV[SLACK_API_TOKEN]!' unless config.token
+end
+
+client = Slack::RealTime::Client.new
+
+client.on :hello do
+  puts(
+    "Successfully connected, welcome '#{client.self.name}' to " \
+    "the '#{client.team.name}' team at https://#{client.team.domain}.slack.com."
+  )
+end
+
+client.on :message do |data|
+  puts data
+
+  client.typing channel: data.channel
+
+  case data.text
+  when 'bot hi'
+    client.message channel: data.channel, text: "Hi <@#{data.user}>!"
+  when 'cc tem arch'
+    client.message channel: data.channel, text: "<@U6GMLJM8X> <@USC4ARMQ8> <@U84LNHGLS> <@U9TCU5QBC> <@US1HETAV7> <@US1RMPR4K> <@U9UPY0X9A> <@USC42T0G5> <@UN1N24WUB> <@US0KDV28K> <@U03F6EQAS>"
+  when 'cc tem'
+    client.message channel: data.channel, text: "<@U6GMLJM8X> <@USC4ARMQ8> <@U84LNHGLS> <@U9TCU5QBC> <@US1HETAV7> <@U9UPY0X9A> <@USC42T0G5> <@UN1N24WUB> <@US0KDV28K>"
+  when 'cc arch'
+    client.message channel: data.channel, text: "<@US1RMPR4K> <@U03F6EQAS>"
+  when /^bot/
+    client.message channel: data.channel, text: "Sorry <@#{data.user}>, what?"
+  end
+end
+
+client.on :close do |_data|
+  puts 'Connection closing, exiting.'
+end
+
+client.on :closed do |_data|
+  puts 'Connection has been disconnected.'
+end
+
+client.start!
