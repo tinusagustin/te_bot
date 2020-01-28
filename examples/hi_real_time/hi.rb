@@ -26,9 +26,9 @@ client.on :message do |data|
   when 'bot hi'
     client.message channel: data.channel, text: "Hi <@#{data.user}>!"
   when 'cc tem arch'
-    client.message channel: data.channel, text: "<@U6GMLJM8X> <@USC4ARMQ8> <@U84LNHGLS> <@U9TCU5QBC> <@US1HETAV7> <@US1RMPR4K> <@U9UPY0X9A> <@USC42T0G5> <@UN1N24WUB> <@US0KDV28K> <@U03F6EQAS>"
+    client.message channel: data.channel, text: "<@U6GMLJM8X> <@USC4ARMQ8> <@U84LNHGLS> <@U9TCU5QBC> <@US1HETAV7> <@US1RMPR4K> <@U9UDR7STZ> <@U9UPY0X9A> <@USC42T0G5> <@UN1N24WUB> <@US0KDV28K> <@USE06RJUF> <@U03F6EQAS>"
   when 'cc tem'
-    client.message channel: data.channel, text: "<@U6GMLJM8X> <@USC4ARMQ8> <@U84LNHGLS> <@U9TCU5QBC> <@US1HETAV7> <@U9UPY0X9A> <@USC42T0G5> <@UN1N24WUB> <@US0KDV28K>"
+    client.message channel: data.channel, text: "<@U6GMLJM8X> <@USC4ARMQ8> <@U84LNHGLS> <@U9TCU5QBC> <@US1HETAV7> <@U9UDR7STZ> <@U9UPY0X9A> <@USC42T0G5> <@UN1N24WUB> <@US0KDV28K> <@USE06RJUF>"
   when 'cc arch'
     client.message channel: data.channel, text: "<@US1RMPR4K> <@U03F6EQAS>"
   when /^bot/
