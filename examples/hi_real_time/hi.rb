@@ -18,7 +18,7 @@ client.on :hello do
 end
 
 client.on :message do |data|
-  puts data
+  # puts data
 
   # client.typing channel: data.channel
 
