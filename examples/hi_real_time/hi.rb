@@ -47,4 +47,4 @@ client.on :closed do |_data|
   puts 'Connection has been disconnected.'
 end
 
-client.start_async
+client.start!
