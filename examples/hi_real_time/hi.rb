@@ -31,6 +31,9 @@ client.on :message do |data|
     client.message channel: data.channel, text: "<@U6GMLJM8X> <@USC4ARMQ8> <@U84LNHGLS> <@U9TCU5QBC> <@US1HETAV7> <@U9UDR7STZ> <@U9UPY0X9A> <@USC42T0G5> <@UN1N24WUB> <@US0KDV28K> <@USE06RJUF>"
   when 'cc arch'
     client.message channel: data.channel, text: "<@US1RMPR4K> <@U03F6EQAS>"
+  when 'piket'
+    client.message channel: data.channel, text: "Sprint 5A : <@UN1N24WUB> <@U84LNHGLS>
+                                                 Sprint 5B : <@USE06RJUF> <@UN1N24WUB>"
   when /^bot/
     client.message channel: data.channel, text: "Sorry <@#{data.user}>, what?"
   end
