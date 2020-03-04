@@ -4,3 +4,4 @@ source 'http://rubygems.org'
 gem 'slack-ruby-client', '>= 0.6.0'
 
 gem 'celluloid-io', require: ['celluloid/current', 'celluloid/io']
+gem 'async-websocket', '~> 0.8.0', require: false
