@@ -20,7 +20,7 @@ end
 client.on :message do |data|
   puts data
 
-  client.typing channel: data.channel
+  # client.typing channel: data.channel
 
   case data.text
   when 'bot hi'
