@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require 'slack-ruby-client'
+require 'async'
 
 Slack.configure do |config|
   config.token = 'xoxb-3315023640-888934731009-mW8iuzjEF6RiULWUtTRbIHAI'
