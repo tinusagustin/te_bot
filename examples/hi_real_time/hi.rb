@@ -8,7 +8,7 @@ Slack.configure do |config|
   raise 'Missing ENV[SLACK_API_TOKEN]!' unless config.token
 end
 
-client = Slack::RealTime::Client.new
+client = Slack::RealTime::Client.new(websocket_ping: 42)
 
 client.on :hello do
   puts(
@@ -46,4 +46,4 @@ client.on :closed do |_data|
   puts 'Connection has been disconnected.'
 end
 
-client.start!
+client.start_async
